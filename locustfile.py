@@ -49,10 +49,10 @@ class HeavyTasks(TaskSet):
 class SimpleUser(HttpUser):
     tasks = [SimpleTasks]
     wait_time = between(1, 5)  # Temps d'attente entre chaque requête pour SimpleUser
-    weight = 2
+    weight = 1
 
 class HeavyUser(HttpUser):
     tasks = [HeavyTasks]
     wait_time = between(5, 10)  # Temps d'attente entre chaque requête pour HeavyUser
-    weight = 98
+    weight = 1
 
